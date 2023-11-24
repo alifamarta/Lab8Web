@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
             $gambar = 'gambar/' . $filename;
         }
     }
+    
     $sql = 'INSERT INTO data_barang (nama, kategori,harga_jual, harga_beli,
     stok, gambar) ';
     $sql .= "VALUE ('{$nama}', '{$kategori}','{$harga_jual}',
