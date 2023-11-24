@@ -21,8 +21,8 @@ table {
 .input label {
     display: inline-block;
     width: 120px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    margin-right: 60px;
+    margin-bottom: 10px;
 }
 
 .input input {
@@ -32,6 +32,10 @@ table {
 
 .input select {
     padding: 5px 50px;
+}
+
+.submit {
+    margin-left: 185px;
 }
 
 .submit input {
@@ -44,5 +48,5 @@ table {
 }
 
 .submit input:hover {
-    background-color: #2288ee;
+    background: #1a7fe3;
 }
