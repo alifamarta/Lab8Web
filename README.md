@@ -257,7 +257,7 @@ Buat file dengan nama ubah.php
             $destination = dirname(__FILE__) . '/gambar/' . $filename;
             if (move_uploaded_file($file_gambar['tmp_name'], $destination))
             {
-                $gambar = 'gambar/' . $filename;;
+                $gambar = 'gambar/' . $filename;
             }
         }
     
