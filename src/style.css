@@ -3,13 +3,16 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+.main {
+    margin-top: 10px;
+}
 table, td, th{
     border: 1px solid;
     padding: 8px;
 }
 
 table {
+    margin-top: 25px;
     width: 60%;
     border-collapse: collapse;
 }

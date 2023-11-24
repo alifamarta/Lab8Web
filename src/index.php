@@ -18,6 +18,7 @@ $result = mysqli_query($conn, $sql);
     <div class="container">
         <h1>Data Barang</h1>
         <div class="main">
+            <a href="tambah.php">Tambah Barang</a>
             <table>
                 <tr>
                     <th>Gambar</th>
