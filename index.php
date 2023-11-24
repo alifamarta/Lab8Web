@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Data Barang</title>
 </head>
 <body>
@@ -37,7 +37,10 @@ $result = mysqli_query($conn, $sql);
                             <td><?= $row['harga_beli']; ?></td>
                             <td><?= $row['harga_jual']; ?></td>
                             <td><?= $row['stok']; ?></td>
-                            <td><?= $row['id_barang']; ?></td>
+                            <td>
+                                <a href="ubah.php?id=<?= $row['id_barang']; ?>">Ubah</a>
+                                <a href="hapus.php?id=<?= $row['id_barang']; ?>">Hapus</a> 
+                            </td>
                         </tr>
                 <?php endwhile; else: ?>
                     <tr>
