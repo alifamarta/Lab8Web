@@ -23,8 +23,10 @@ if (isset($_POST['submit'])) {
     $sql = 'UPDATE data_barang SET ';
     $sql .= "nama = '{$nama}', kategori = '{$kategori}', ";
     $sql .= "harga_jual = '{$harga_jual}', harga_beli = '{$harga_beli}', stok = '{$stok}' ";
+
     if (!empty($gambar))
         $sql .= ", gambar = '{$gambar}' ";
+    
     $sql .= "WHERE id_barang = '{$id}'";
     $conn = mysqli_connect($host, $user, $pass, $db);
     $result = mysqli_query($conn, $sql);
