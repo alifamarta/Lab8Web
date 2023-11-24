@@ -15,8 +15,7 @@ if (isset($_POST['submit'])) {
     if ($file_gambar['error'] == 0) {
         $filename = str_replace(' ', '_', $file_gambar['name']);
         $destination = dirname(__FILE__) . '/gambar/' . $filename;
-        if (move_uploaded_file($file_gambar['tmp_name'], $destination))
-        {
+        if (move_uploaded_file($file_gambar['tmp_name'], $destination)) {
             $gambar = 'gambar/' . $filename;
         }
     }
@@ -31,18 +30,18 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     header('location: index.php');
-    }
+}
 
-    $id = $_GET['id'];
-    $conn = mysqli_connect($host, $user, $pass, $db);
-    $sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
-    $result = mysqli_query($conn, $sql);
-    if (!$result) die('Error: Data tidak tersedia');
-    $data = mysqli_fetch_array($result);
+$id = $_GET['id'];
+$conn = mysqli_connect($host, $user, $pass, $db);
+$sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
+$result = mysqli_query($conn, $sql);
+if (!$result) die('Error: Data tidak tersedia');
+$data = mysqli_fetch_array($result);
 
-    function is_select($var, $val) {
-        if ($var == $val) return 'selected="selected"';
-        return false;
+function is_select($var, $val) {
+    if ($var == $val) return 'selected="selected"';
+    return false;
 }
 ?>
 
