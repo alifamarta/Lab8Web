@@ -2,8 +2,7 @@
 error_reporting(E_ALL);
 include_once 'koneksi.php';
 
-if (isset($_POST['submit']))
-{
+if (isset($_POST['submit'])) {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $kategori = $_POST['kategori'];
@@ -13,13 +12,12 @@ if (isset($_POST['submit']))
     $file_gambar = $_FILES['file_gambar'];
     $gambar = null;
 
-    if ($file_gambar['error'] == 0)
-    {
+    if ($file_gambar['error'] == 0) {
         $filename = str_replace(' ', '_', $file_gambar['name']);
         $destination = dirname(__FILE__) . '/gambar/' . $filename;
         if (move_uploaded_file($file_gambar['tmp_name'], $destination))
         {
-            $gambar = 'gambar/' . $filename;;
+            $gambar = 'gambar/' . $filename;
         }
     }
 
